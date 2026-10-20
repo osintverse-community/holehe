@@ -19,7 +19,7 @@ outputs:
 runtime:
   kind: docker
   # Filled in by the release workflow with the pushed image's digest.
-  image: ghcr.io/osintverse-community/holehe@sha256:0000000000000000000000000000000000000000000000000000000000000000
+  image: ghcr.io/osintverse-community/holehe@sha256:ab0148db84659609912a012d1e8686474b62559bce73e21fda6f82feddb1dab2
   platforms: [linux/amd64, linux/arm64]
   command: ["holehe", "--only-used", "--no-color", "--no-clear", "{email}"]
   output_format: text
