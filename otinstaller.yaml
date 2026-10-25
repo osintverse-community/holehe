@@ -3,7 +3,7 @@
 schema: 1
 name: holehe
 namespace: osintverse-community
-version: 1.61.1
+version: 1.61.2
 summary: "Checks whether an email address is registered on 120+ sites, without alerting its owner"
 readme: README.md
 license: GPL-3.0
@@ -19,7 +19,7 @@ outputs:
 runtime:
   kind: docker
   # Filled in by the release workflow with the pushed image's digest.
-  image: ghcr.io/osintverse-community/holehe@sha256:412ad349dbab20b246f80c4e94d72b9cbb0d99a1ead4fcd0c1a1047c066d46bf
+  image: ghcr.io/osintverse-community/holehe@sha256:51206cc2d840ca83f58ec89f680a65e2572c6f8f58d821660fc101acde37d789
   platforms: [linux/amd64, linux/arm64]
   command: ["holehe", "--only-used", "--no-color", "--no-clear", "{email}"]
   output_format: text
