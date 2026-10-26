@@ -3,7 +3,7 @@
 schema: 1
 name: holehe
 namespace: osintverse-community
-version: 1.61.2
+version: 1.61.3
 summary: "Checks whether an email address is registered on 120+ sites, without alerting its owner"
 readme: README.md
 license: GPL-3.0
@@ -23,6 +23,8 @@ runtime:
   platforms: [linux/amd64, linux/arm64]
   command: ["holehe", "--only-used", "--no-color", "--no-clear", "{email}"]
   output_format: text
+  # Entities come only from lines that start with these, not from banners, sponsor links or update notices.
+  finding_prefixes: ["[+]"]
   timeout_seconds: 600
 network:
   egress: true
